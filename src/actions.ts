@@ -22,12 +22,7 @@ export const login = async (
 	formData: FormData
 ) => {
 	const session = await getSession();
-
 	const formUsername = formData.get("username") as string;
-	const formPassword = formData.get("password") as string;
-
-	// check user in the db
-	//const user = await db.getUser(username,password)
 	session.isBlocked = isBlocked;
 	session.isPro = isPro;
 
